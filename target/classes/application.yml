@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: local
+server:
+  port: 8096
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  nosql:
+    endpoint: http://localhost:8087
+    poolSize: 20
